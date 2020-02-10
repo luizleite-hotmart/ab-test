@@ -9,17 +9,20 @@ class FeatureTest {
 
     @Test
     fun `create feature entity`() {
-        val feature = Feature(name = "name", description = "description", percentage = 0.10)
+        val feature = Feature(name = "name", description = "description", percentage = 10)
         Assertions.assertEquals("name", feature.name)
         Assertions.assertEquals("description", feature.description)
-        Assertions.assertEquals(0.10, feature.percentage)
+        Assertions.assertEquals(10, feature.percentage)
         Assertions.assertEquals(0, feature.id)
     }
 
     @Test
-    fun `user abble to use feature`() {
-        val feature = Feature(name = "name", description = "description", percentage = 0.10)
+    fun `user not able to use feature`() {
+        val feature = Feature(name = "name", description = "description", percentage = 10)
         feature.id = 10
         val user = User("ucode")
+        Assertions.assertEquals(10,  feature.id) // 777 * 10 * 111111138 = 45115764 % 100 = 64
+        val userAbleUseFeature = feature.userAbleUseFeature(user.ucode)
+        Assertions.assertFalse(userAbleUseFeature)
     }
 }
