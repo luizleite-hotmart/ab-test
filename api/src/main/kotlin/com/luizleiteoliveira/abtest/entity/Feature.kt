@@ -11,7 +11,7 @@ data class Feature(var name: String = "",
     fun userAbleUseFeature(ucode: String): Boolean {
         var ucodeNumber = ucode.hashCode()
         var result = (777 * ucodeNumber * this.id) % 100
-        return result > this.percentage
+        return result < this.percentage
     }
 
     @Id
