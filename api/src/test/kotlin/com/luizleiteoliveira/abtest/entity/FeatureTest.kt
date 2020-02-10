@@ -14,4 +14,9 @@ class FeatureTest {
         Assertions.assertEquals("description", feature.description)
         Assertions.assertEquals(0.10, feature.percentage)
     }
+
+    @Test
+    fun `user abble to use feature`() {
+        val feature = Feature(name = "name", description = "description", percentage = 0.10)
+    }
 }
