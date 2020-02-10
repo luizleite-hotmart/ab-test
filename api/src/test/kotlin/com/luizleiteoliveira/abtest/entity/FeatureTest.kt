@@ -25,4 +25,24 @@ class FeatureTest {
         val userAbleUseFeature = feature.userAbleUseFeature(user.ucode)
         Assertions.assertFalse(userAbleUseFeature)
     }
+
+    @Test
+    fun `user able to use feature increase the percentage`() {
+        val feature = Feature(name = "name", description = "description", percentage = 65)
+        feature.id = 10
+        val user = User("ucode")
+        Assertions.assertEquals(10,  feature.id) // 777 * 10 * 111111138 = 45115764 % 100 = 64
+        val userAbleUseFeature = feature.userAbleUseFeature(user.ucode)
+        Assertions.assertTrue(userAbleUseFeature)
+    }
+
+    @Test
+    fun `user able to use feature`() {
+        val feature = Feature(name = "name", description = "description", percentage = 10)
+        feature.id = 21
+        val user = User("L")
+        Assertions.assertEquals(10,  feature.id) // 76 * 10 * 111111138 = 590520 % 100 = 20
+        val userAbleUseFeature = feature.userAbleUseFeature(user.ucode)
+        Assertions.assertTrue(userAbleUseFeature)
+    }
 }
