@@ -1,4 +1,4 @@
-package com.luizleiteoliveira.abtest
+package com.luizleiteoliveira.abtest.entity
 
 import com.luizleiteoliveira.abtest.entity.User
 import org.junit.jupiter.api.Assertions
