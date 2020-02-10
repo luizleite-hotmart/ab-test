@@ -1,6 +1,5 @@
 package com.luizleiteoliveira.abtest.entity
 
-import com.luizleiteoliveira.abtest.entity.User
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
@@ -10,8 +9,7 @@ class UserTest {
 
     @Test
     fun `create test for user`() {
-        val user = User("ucode", "name")
+        val user = User("ucode")
         Assertions.assertEquals("ucode", user.ucode)
-        Assertions.assertEquals("name", user.name)
     }
 }

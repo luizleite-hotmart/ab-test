@@ -1,6 +1,6 @@
 package com.luizleiteoliveira.abtest.entity
 
-data class User(val ucode: String, val name: String) {
+data class User(val ucode: String) {
 
 
 }
