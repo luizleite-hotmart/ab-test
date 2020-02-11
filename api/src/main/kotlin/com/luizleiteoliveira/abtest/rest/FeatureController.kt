@@ -29,7 +29,7 @@ class FeatureController(private val featureRepository: FeatureRepository) {
     }
 
     @GetMapping("/{featureId}")
-    fun checkUserAbleToUseFeature(@RequestParam("ucode") ucode: String, @PathParam("featureId") featureId: Long): Boolean {
+    fun checkUserAbleToUseFeature(@RequestParam("ucode") ucode: String, @PathVariable featureId: Long): Boolean {
         val feature = featureRepository.findById(featureId).get()
         return feature.userAbleUseFeature(ucode)
     }
