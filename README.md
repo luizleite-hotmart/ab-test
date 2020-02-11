@@ -3,9 +3,9 @@
 
  [x] app com endpoint funcionando
  
- [ ] configurar h2
+ [x] configurar h2
  
- [ ] configurar repository para salvar feature
+ [x] configurar repository para salvar feature
  
  [ ] Teste de controller
  
