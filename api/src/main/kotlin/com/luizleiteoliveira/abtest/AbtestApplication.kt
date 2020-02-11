@@ -1,5 +1,6 @@
 package com.luizleiteoliveira.abtest
 
+import org.springframework.boot.autoconfigure.AutoConfigurationPackage
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
